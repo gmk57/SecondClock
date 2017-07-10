@@ -10,7 +10,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 /**
- * My first own project: very simple clock with seconds (which I missed on my phone).
+ * My first own project: very simple clock for Android with seconds (which I missed on my phone).
  * Just to start with something.
  */
 
