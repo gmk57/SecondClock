@@ -9,11 +9,6 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Date;
 
-/**
- * My first own project: very simple clock for Android with seconds (which I missed on my phone).
- * Just to start with something.
- */
-
 public class MainActivity extends Activity implements Runnable {
     private TextView mClockTextView;
 
@@ -49,6 +44,8 @@ public class MainActivity extends Activity implements Runnable {
 
     @Override
     public void run() {
+        // Default time format for current locale, with respect (on API 22+) to user's 12/24-hour
+        // settings. I couldn't find any simple way to respect it back to API 14.
         mClockTextView.setText(DateFormat.getTimeInstance(DateFormat.MEDIUM).format(new Date()));
         mClockTextView.postDelayed(this, 1000);
     }
